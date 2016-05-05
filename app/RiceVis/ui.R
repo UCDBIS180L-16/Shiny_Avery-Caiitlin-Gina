@@ -19,25 +19,20 @@ shinyUI(fluidPage(
                      "Seed.length",
                      "Seed.width",
                      "Seed.volume")
-      )),
-    
-    sidebarPanel(
+      ),
       radioButtons("trait", 
-                     "Choose a trait to plot the phenotype against",
-                     c("Alu.Tol",
-                       "Amylose.content",
-                       "Blast.resistance")
-        )),
-  
-    sidebarPanel(
+                   "Choose a trait to plot the phenotype against",
+                   c("Alu.Tol",
+                     "Amylose.content",
+                     "Blast.resistance")
+      ),
       radioButtons("color", 
-                     "Choose how to color the plot:",
-                     c("'virginica'",
-                       "'sertosa'",
-                       "'versicolor'")
-        )),
-    
-      # Show a plot of the generated distribution
+                   "Choose how to color the plot:",
+                   c("Population",
+                     "Region")
+      )
+    ),
+    # Show a plot of the generated distribution
       mainPanel(plotOutput("boxPlot"))
     )
   )
