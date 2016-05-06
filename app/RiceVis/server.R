@@ -6,7 +6,8 @@
 # 
 #    http://shiny.rstudio.com/
 #
-
+library(shiny)
+library(ggplot2)
 test <- readRDS(file="data.Rda")
 
 # Define server logic required to draw a histogram
