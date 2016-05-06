@@ -13,19 +13,32 @@ shinyUI(fluidPage(
   # phenotypic trait choice
   sidebarLayout(
     sidebarPanel(
-      radioButtons("pheno", 
-                   "Choose a phenotype to plot",
-                   c("Seed.surface.area",
-                     "Seed.length",
-                     "Seed.width",
-                     "Seed.volume")
+      radioButtons("plot", 
+                   "Choose a graph to plot",
+                   c("Violin Plot"="violin",
+                     "Box Plot" = "boxplot",
+                     "Scatter Plot" = "scatterplot"
+                     )
       ),
       radioButtons("trait", 
-                   "Choose a trait to plot the phenotype against",
-                   c("Florets.per.panicle",
-                     "Panicle.fertility",
-                     "Seed.number.per.panicle",
-                     "Panicle.number.per.plant")
+                   "Choose a trait to plot",
+                   c("Aluminum Tolerance" = "Alu.Tol",
+                     "Amylose Content" = "Amylose.content",
+                     "Blast Resistance" = "Blast.resistance",
+                     "Plant Height" = "Plant.height",
+                     "Seed Length" = "Seed.length",
+                     "Seed Width" = "Seed.width",
+                     "Seed Volume" = "Seed.volume")
+      ),
+      radioButtons("pheno", 
+                   "Choose a trait to plot against (only for scatterplot)",
+                   c("Aluminum Tolerance" = "Alu.Tol",
+                     "Amylose Content" = "Amylose.content",
+                     "Blast Resistance" = "Blast.resistance",
+                     "Plant Height" = "Plant.height",
+                     "Seed Length" = "Seed.length",
+                     "Seed Width" = "Seed.width",
+                     "Seed Volume" = "Seed.volume")
       ),
       radioButtons("color", 
                    "Choose how to color the plot:",
