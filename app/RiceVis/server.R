@@ -24,7 +24,7 @@ shinyServer(function(input, output) {
                             color=input$color
                  )
     )
-    pl2 <- ggplot(data = data.pheno.mds, 
+    pl2 <- ggplot(data = test, 
                  aes_string(x=input$pheno, 
                             y=input$trait, 
                             color=input$color
