@@ -15,20 +15,21 @@ shinyUI(fluidPage(
     sidebarPanel(
       radioButtons("pheno", 
                    "Choose a phenotype to plot",
-                   c("Plant.height",
+                   c("Seed.surface.area",
                      "Seed.length",
                      "Seed.width",
                      "Seed.volume")
       ),
       radioButtons("trait", 
                    "Choose a trait to plot the phenotype against",
-                   c("Alu.Tol",
-                     "Amylose.content",
-                     "Blast.resistance")
+                   c("Florets.per.panicle",
+                     "Panicle.fertility",
+                     "Seed.number.per.panicle",
+                     "Panicle.number.per.plant")
       ),
       radioButtons("color", 
                    "Choose how to color the plot:",
-                   c("Population",
+                   c("popID",
                      "Region")
       )
     ),
