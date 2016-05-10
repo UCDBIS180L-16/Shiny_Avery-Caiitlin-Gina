@@ -6,15 +6,16 @@ shinyUI(fluidPage(
   titlePanel("Rice Data Visualization"),
   
   # Description of application
-  helpText("The following application creates a scatterplot of user-chosen ",
-           "phenotypic traits. Users can also choose whether to color the traits by",
+  helpText("The following application creates a user-friendly visualization of various rice phenotypic traits of
+            as they relate to their population or country of origin. User has choice to display data in multiple graph styles ,
+           including violin, scatter, or box-plot formats. Users can also choose whether to color the traits by",
            " either population or country of origin."),
   
   # phenotypic trait choice
   sidebarLayout(
     sidebarPanel(
       radioButtons("plot", 
-                   "Choose a graph to plot",
+                   "Choose a graph format",
                    c("Violin Plot"="violin",
                      "Box Plot" = "boxplot",
                      "Scatter Plot" = "scatterplot"
