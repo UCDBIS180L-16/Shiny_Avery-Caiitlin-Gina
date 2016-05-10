@@ -15,7 +15,7 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       radioButtons("plot", 
-                   "Choose a graph to plot",
+                   "Choose a graph format",
                    c("Violin Plot"="violin",
                      "Box Plot" = "boxplot",
                      "Scatter Plot" = "scatterplot"
